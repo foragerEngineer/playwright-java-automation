@@ -1,4 +1,4 @@
-package org.example;
+package m.sierra;
 
 /**
  * Hello world!
