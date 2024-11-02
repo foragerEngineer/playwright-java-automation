@@ -10,12 +10,12 @@ public class HomePage {
     private final Locator basicPageLink;
 
     public HomePage(Page page) {
-        this.asserts = new PlayAsserts();
-        this.basicPageLink = page.locator("a");
+        this.asserts = new PlayAsserts(page);
+        this.basicPageLink = page.locator("h2");
     }
 
     public void isHomePageDisplayed() {
-        asserts.assertElementHasText(basicPageLink, "basicpagetest");
+        asserts.assertElementHasText(basicPageLink, "ecbiz312.inmotionhosting.com");
     }
 
 

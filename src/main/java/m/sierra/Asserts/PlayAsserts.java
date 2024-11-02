@@ -1,15 +1,20 @@
 package m.sierra.Asserts;
 
 import com.microsoft.playwright.Locator;
-import m.sierra.Driver.PlaywrightFactory;
+import com.microsoft.playwright.Page;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-public class PlayAsserts extends PlaywrightFactory {
+public class PlayAsserts {
+
+    private final Page page;
+
+    public PlayAsserts(Page page) {
+        this.page = page;
+    }
 
     public void assertElementHasText(Locator elementLocator, String text) {
-        Locator element = page.locator(String.valueOf(elementLocator));
-        assertThat(element).hasText(String.valueOf(text));
+        assertThat(elementLocator).hasText(text);
     }
 
 

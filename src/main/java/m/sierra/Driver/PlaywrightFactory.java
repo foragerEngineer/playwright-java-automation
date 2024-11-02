@@ -19,6 +19,7 @@ public class PlaywrightFactory {
                 break;
             case "chromium":
                 browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
+                break;
             case "firefox":
                 browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
                 break;
@@ -26,7 +27,7 @@ public class PlaywrightFactory {
                 browser = playwright.webkit().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false));
                 break;
             default:
-                break;
+                throw new IllegalArgumentException("Unsupported browser: " + browserType);
         }
 
         browserContext = browser.newContext();

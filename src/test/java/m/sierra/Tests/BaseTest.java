@@ -4,6 +4,7 @@ import com.microsoft.playwright.Page;
 import m.sierra.Driver.PlaywrightFactory;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class BaseTest {
@@ -13,14 +14,17 @@ public class BaseTest {
 
     @BeforeClass
     @Parameters({"appURL", "browserType"})
-    public void setUp(String appURL, String browserType) {
+    public void setUp(@Optional("http://automationpractice.com/index.php") String appURL,
+                      @Optional("chrome") String browserType) {
         driver = new PlaywrightFactory();
         page = driver.getPage(appURL, browserType);
     }
 
     @AfterClass
     public void tearDown() {
-        page.context().browser().close();
+        if (page != null) {
+            page.context().browser().close();
+        }
     }
 
 }
