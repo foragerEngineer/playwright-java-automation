@@ -14,5 +14,4 @@ public class FirstTest extends BaseTest {
         homePage.isHomePageDisplayed();
     }
 
-
 }
