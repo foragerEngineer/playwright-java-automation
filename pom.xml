@@ -92,10 +92,10 @@
                             <argLine>
                                 -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                             </argLine>
-                        <testFailureIgnore>true</testFailureIgnore>
-                        <suiteXmlFiles>
-                            <suiteXmlFile>src/test/resources/testng_suite.xml</suiteXmlFile>
-                        </suiteXmlFiles>
+                            <testFailureIgnore>true</testFailureIgnore>
+                            <suiteXmlFiles>
+                                <suiteXmlFile>src/test/resources/testng_suite.xml</suiteXmlFile>
+                            </suiteXmlFiles>
                             <excludedGroups>junit-vintage</excludedGroups> <!-- Exclude JUnit 4 tests -->
                         </configuration>
                     </execution>
