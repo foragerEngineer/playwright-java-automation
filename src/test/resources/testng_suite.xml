@@ -4,7 +4,7 @@
     <parameter name="appURL" value="http://automationpractice.com/index.php"/>
     <parameter name="browserType" value="chrome"/>
 
-    <test thread-count="5" name="Test">
+    <test thread-count="5" name="First Tests">
         <classes>
             <class name="m.sierra.Tests.FirstTest"/>
         </classes>
