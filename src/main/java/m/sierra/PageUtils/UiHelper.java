@@ -1,10 +1,16 @@
 package m.sierra.PageUtils;
 
-import m.sierra.Driver.PlaywrightFactory;
+import com.microsoft.playwright.Page;
 
-public class UiHelper extends PlaywrightFactory {
+public class UiHelper {
 
-    public void waitTilElementIsDisplayed() {
+    private final Page page;
 
+    public UiHelper(Page page) {
+        this.page = page;
+    }
+
+    public void waitUntilPageLoad() {
+        page.waitForLoadState();
     }
 }

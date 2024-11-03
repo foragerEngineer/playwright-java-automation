@@ -25,6 +25,8 @@ public class BaseTest {
         if (page != null) {
             page.context().browser().close();
         }
+//        FileUtility forwarder = new FileUtility();
+//        forwarder.forwardAllureResults();
     }
 
 }

@@ -1,7 +1,7 @@
 package m.sierra.Tests;
 
 import m.sierra.Pages.HomePage;
-import m.sierra.Utilities.UiHelper;
+import m.sierra.PageUtils.UiHelper;
 import org.testng.annotations.Test;
 
 public class FirstTest extends BaseTest {
