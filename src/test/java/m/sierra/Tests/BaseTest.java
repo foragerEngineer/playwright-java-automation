@@ -14,7 +14,7 @@ public class BaseTest {
 
     @BeforeClass
     @Parameters({"appURL", "browserType"})
-    public void setUp(@Optional("http://automationpractice.com/index.php") String appURL,
+    public void setUp(@Optional("https://playwright.dev/") String appURL,
                       @Optional("chrome") String browserType) {
         driver = new PlaywrightFactory();
         page = driver.getPage(appURL, browserType);

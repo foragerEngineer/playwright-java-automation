@@ -22,5 +22,9 @@ public class PlayAsserts {
         assertThat(elementLocator).hasText(text);
     }
 
+    public void assertElementIsVisible(String elementLocator) {
+        assertThat(page.locator(elementLocator)).isVisible();
+    }
+
 
 }

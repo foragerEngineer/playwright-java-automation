@@ -13,4 +13,5 @@ public class UiHelper {
     public void waitUntilPageLoad() {
         page.waitForLoadState();
     }
+
 }
