@@ -15,11 +15,11 @@ public class FirstTest extends BaseTest {
     }
 
     @Test(priority = 2)
-    public void verifyGetStartedTest() throws InterruptedException {
+    public void verifyGetStartedTest() {
         HomePage homePage = new HomePage(page);
         UiHelper uiHelper = new UiHelper(page);
         uiHelper.waitUntilPageLoad();
-        homePage.clickGetStartedDisplayed();
+        homePage.clickGetStartedButton();
     }
 
 }

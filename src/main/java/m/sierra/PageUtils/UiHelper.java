@@ -14,4 +14,8 @@ public class UiHelper {
         page.waitForLoadState();
     }
 
+    public void clickElement(String locator) {
+        page.click(locator);
+    }
+
 }

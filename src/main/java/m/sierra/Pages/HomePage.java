@@ -21,12 +21,11 @@ public class HomePage {
         asserts.assertElementHasText(basicPageLink, "Playwright");
     }
 
-    public void clickGetStartedDisplayed() {
+    public void clickGetStartedButton() {
         System.out.println("Clicking on Get Started");
         page.click("//a[normalize-space()='Get started']");
         System.out.println("Clicked on Get Started");
         System.out.println("Waiting for 4 seconds");
-        System.out.println("Waited for 4 seconds");
     }
 
 
