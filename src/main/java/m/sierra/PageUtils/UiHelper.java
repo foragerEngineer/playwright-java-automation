@@ -13,4 +13,9 @@ public class UiHelper {
     public void waitUntilPageLoad() {
         page.waitForLoadState();
     }
+
+    public void clickElement(String locator) {
+        page.click(locator);
+    }
+
 }
