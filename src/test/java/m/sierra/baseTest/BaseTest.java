@@ -1,4 +1,4 @@
-package m.sierra.Tests;
+package m.sierra.baseTest;
 
 import com.microsoft.playwright.Page;
 import m.sierra.Driver.PlaywrightFactory;
