@@ -8,6 +8,7 @@ import org.junit.jupiter.api.extension.BeforeEachCallback;
 import org.junit.jupiter.api.extension.ExtensionContext;
 
 public class PlaywrightExtension implements BeforeEachCallback, AfterEachCallback {
+
     private static Browser browser;
     private static BrowserContext context;
     private static Page page;

@@ -1,6 +1,7 @@
 package m.sierra.PageUtils;
 
 import com.microsoft.playwright.Page;
+import io.qameta.allure.Step;
 
 public class UiHelper {
 
@@ -10,6 +11,7 @@ public class UiHelper {
         this.page = page;
     }
 
+    @Step
     public void waitUntilPageLoad() {
         page.waitForLoadState();
     }

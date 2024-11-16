@@ -26,3 +26,12 @@ allure.results.directory=target/allure-results
 ```
 
 # Starting the Allure server
+1. Run the following command to start the Allure server:
+```
+allure serve target/allure-results
+```
+2. Open the following URL in a browser to view the Allure report:
+```
+http://localhost:4040
+```
+3. To stop the server, press `Ctrl+C` in the terminal.

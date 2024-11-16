@@ -5,7 +5,7 @@ import org.testng.annotations.Parameters;
 
 public class PlaywrightFactory {
 
-    Playwright playwright;
+    public Playwright playwright;
     protected Page page;
     Browser browser;
     BrowserContext browserContext;
@@ -35,4 +35,5 @@ public class PlaywrightFactory {
         page.navigate(appURL);
         return page;
     }
+
 }

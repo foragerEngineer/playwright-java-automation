@@ -1,31 +1,29 @@
 package m.sierra.Pages;
 
 import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.Page;
+import io.qameta.allure.Step;
 import m.sierra.Asserts.PlayAsserts;
 
-public class HomePage {
+public final class HomePage extends BasePage {
 
-    private final Page page;
-    private final PlayAsserts asserts;
-    private final Locator basicPageLink;
-
-    public HomePage(Page page) {
-        this.page = page;
-        this.asserts = new PlayAsserts(page);
-        this.basicPageLink = page.locator("span:has-text(\"Playwright\")");
+    public HomePage() {
+        super();
     }
 
+    private final Locator basicPageLink = page.locator("//a[normalize-space()='Playwright']");
+
+    @Step
     public void isHomePageDisplayed() {
-        asserts.assertElementHasText(basicPageLink, "Playwright");
+        PlayAsserts playAsserts = new PlayAsserts();
+        playAsserts.assertElementHasText(basicPageLink, "Playwright");
     }
 
+    @Step
     public void clickGetStartedButton() {
         System.out.println("Clicking on Get Started");
         page.click("//a[normalize-space()='Get started']");
         System.out.println("Clicked on Get Started");
         System.out.println("Waiting for 4 seconds");
     }
-
 
 }
