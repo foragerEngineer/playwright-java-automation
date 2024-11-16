@@ -11,7 +11,7 @@ public class UiHelper {
         this.page = page;
     }
 
-    @Step
+    @Step("Wait until page is loaded")
     public void waitUntilPageLoad() {
         page.waitForLoadState();
     }
