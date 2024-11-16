@@ -14,7 +14,7 @@ public class BrowserUtils {
     }
 
     public void startVideoRecording() {
-        browser.newContext(new Browser.NewContextOptions().setRecordVideoDir(Paths.get("videos/")));
+        browser.newContext(new Browser.NewContextOptions().setRecordVideoDir(Paths.get("target/videos")));
     }
 
     public BrowserUtils newPageContext() {

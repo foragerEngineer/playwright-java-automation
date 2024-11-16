@@ -1,24 +1,21 @@
 package m.sierra.baseTest;
 
-import com.microsoft.playwright.Page;
 import m.sierra.Driver.PlaywrightFactory;
+import m.sierra.Pages.BasePage;
 import m.sierra.Utilities.BrowserUtils;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-public class BaseTest {
-
-    protected Page page;
-    PlaywrightFactory driver;
+public class BaseTest extends PlaywrightFactory{
 
     @BeforeClass
     @Parameters({"appURL", "browserType"})
     public void setUp(@Optional("https://playwright.dev/") String appURL,
                       @Optional("chrome") String browserType) {
-        driver = new PlaywrightFactory();
-        page = driver.getPage(appURL, browserType);
+        page = getPage(appURL, browserType);
+        BasePage.setAndConfigurePage(page);
         BrowserUtils browserUtils = new BrowserUtils(page.context().browser());
         browserUtils.newPageContext()
                 .startVideoRecording();
@@ -28,6 +25,9 @@ public class BaseTest {
     public void tearDown() {
         if (page != null) {
             page.context().browser().close();
+        }
+        if (playwright != null) {
+            playwright.close();
         }
     }
 

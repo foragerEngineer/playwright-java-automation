@@ -1,23 +1,19 @@
 package m.sierra.Pages;
 
 import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.Page;
 import m.sierra.Asserts.PlayAsserts;
 
-public class HomePage {
+public final class HomePage extends BasePage {
 
-    private final Page page;
-    private final PlayAsserts asserts;
-    private final Locator basicPageLink;
-
-    public HomePage(Page page) {
-        this.page = page;
-        this.asserts = new PlayAsserts(page);
-        this.basicPageLink = page.locator("span:has-text(\"Playwright\")");
+    public HomePage() {
+        super();
     }
 
+    private final Locator basicPageLink = page.locator("//a[normalize-space()='Playwright']");
+
     public void isHomePageDisplayed() {
-        asserts.assertElementHasText(basicPageLink, "Playwright");
+        PlayAsserts playAsserts = new PlayAsserts();
+        playAsserts.assertElementHasText(basicPageLink, "Playwright");
     }
 
     public void clickGetStartedButton() {
@@ -26,6 +22,5 @@ public class HomePage {
         System.out.println("Clicked on Get Started");
         System.out.println("Waiting for 4 seconds");
     }
-
 
 }

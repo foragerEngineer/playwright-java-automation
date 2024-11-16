@@ -1,16 +1,14 @@
 package m.sierra.Asserts;
 
 import com.microsoft.playwright.Locator;
-import com.microsoft.playwright.Page;
+import m.sierra.Pages.BasePage;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
-public class PlayAsserts {
+public class PlayAsserts extends BasePage {
 
-    private final Page page;
-
-    public PlayAsserts(Page page) {
-        this.page = page;
+    public PlayAsserts() {
+        super();
     }
 
     /***
