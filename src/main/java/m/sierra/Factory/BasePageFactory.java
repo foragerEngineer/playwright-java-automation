@@ -1,10 +1,10 @@
 package m.sierra.Factory;
 
 import com.microsoft.playwright.Page;
-import lombok.extern.slf4j.Slf4j;
+import lombok.extern.log4j.Log4j2;
 import m.sierra.Pages.BasePage;
 
-@Slf4j
+@Log4j2
 public final class BasePageFactory {
 
     private BasePageFactory() {

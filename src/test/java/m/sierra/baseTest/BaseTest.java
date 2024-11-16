@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
-public class BaseTest extends PlaywrightFactory{
+public class BaseTest extends PlaywrightFactory {
 
     @BeforeClass
     @Parameters({"appURL", "browserType"})
