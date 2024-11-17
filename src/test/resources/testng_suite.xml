@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Browser Tests">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+        <listener class-name="m.sierra.utilities.listeners.LogListener"/>
+    </listeners>
     <parameter name="appURL" value="https://playwright.dev/"/>
     <parameter name="browserType" value="chrome"/>
-
     <test thread-count="5" name="First Tests">
         <classes>
             <class name="m.sierra.Tests.FirstTest"/>

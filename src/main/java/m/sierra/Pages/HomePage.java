@@ -12,13 +12,13 @@ public final class HomePage extends BasePage {
 
     private final Locator basicPageLink = page.locator("//a[normalize-space()='Playwright']");
 
-    @Step
+    @Step("Verify the title of the home page")
     public void isHomePageDisplayed() {
         PlayAsserts playAsserts = new PlayAsserts();
         playAsserts.assertElementHasText(basicPageLink, "Playwright");
     }
 
-    @Step
+    @Step("Click on Get Started button")
     public void clickGetStartedButton() {
         System.out.println("Clicking on Get Started");
         page.click("//a[normalize-space()='Get started']");

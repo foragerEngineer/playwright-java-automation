@@ -18,6 +18,16 @@ allure --version
 ```
 # Getting started with Allure Playwright
 
+## Add Allure dependencies
+```
+<!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-testng -->
+ <dependency>
+   <groupId>io.qameta.allure</groupId>
+   <artifactId>allure-testng</artifactId>
+   <version>2.29.0</version>
+ </dependency>
+```
+
 ### Add an allure.properties file
 1. Create a new file named `allure.properties` in inside of test/resources.
 2. Add the following content to the file:
