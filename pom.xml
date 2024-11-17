@@ -83,6 +83,8 @@
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.1.2</version>
                 <configuration>
+                    <forkCount>1</forkCount> <!-- Adjust the number of forks if needed -->
+                    <reuseForks>true</reuseForks> <!-- Reuse forks to improve performance -->
                     <suiteXmlFiles>
                         <suiteXmlFile>src/test/resources/testng_suite.xml</suiteXmlFile>
                     </suiteXmlFiles>
@@ -90,16 +92,6 @@
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
                     <testFailureIgnore>true</testFailureIgnore>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven.compiler.version}</version>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                    <source>${maven.compiler.source}</source>
-                    <target>${maven.compiler.target}</target>
                 </configuration>
             </plugin>
         </plugins>
