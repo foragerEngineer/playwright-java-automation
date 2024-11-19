@@ -36,9 +36,41 @@ Add the following dependencies to your `pom.xml` file:
    - AspectJ enables the modularization of crosscutting concerns such as: logging, profiling, synchronization, performance optimization, debugging support, multi-object protocols, resource sharing, distribution, security, etc.
    - It provides support for aspect-oriented programming in Java.
 
-# Step 2: Configuring TestNG in the POM file
+# Step 2: Configuring SureFire in the POM file
 Once dependencies are added, you need to configure the TestNG plugin in the `pom.xml` file. Add the following plugin to the `build` section of the `pom.xml` file:
-
+1. Add the following plugin to the `build` section of the `pom.xml` file:
 ```
-
-
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-surefire-plugin</artifactId>
+  <version>3.0.0-M5</version> <!-- or the latest version -->
+  <configuration>
+    <suiteXmlFiles>
+      <suiteXmlFile>testng.xml</suiteXmlFile>
+    </suiteXmlFiles>
+  </configuration>
+</plugin>
+```
+2. Create a `testng.xml` file in the root directory of your project and add the following content:
+```
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite1">
+  <test name="Test1">
+    <classes>
+      <class name="com.example.TestClass1"/>
+    </classes>
+  </test>
+</suite>
+```
+3. Replace `com.example.TestClass1` with the name of your test class.
+4. Right-click on the `testng.xml` file and select `Run 'testng.xml'`.
+5. The test suite will run and you will see the results in the `Run` tab.
+6. You can also run the test suite from the command line using the following maven command:
+```
+mvn test
+```
+7. The test suite will run and you will see the results in the console.
+8. Alternatively, you can run the test suite from the command line using the following maven surefire command:
+```
+mvn test -Dsurefire:testClass
+```
