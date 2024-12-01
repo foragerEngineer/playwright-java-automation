@@ -2,8 +2,9 @@ package m.sierra.PageUtils;
 
 import com.microsoft.playwright.Page;
 import io.qameta.allure.Step;
+import m.sierra.Pages.BasePage;
 
-public class UiHelper {
+public class UiHelper extends BasePage {
 
     private final Page page;
 

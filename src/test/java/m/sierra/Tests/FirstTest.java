@@ -1,5 +1,6 @@
 package m.sierra.Tests;
 
+import m.sierra.PageUtils.Locators.InnerTextAll;
 import m.sierra.Pages.HomePage;
 import m.sierra.PageUtils.UiHelper;
 import m.sierra.baseTest.BaseTest;
@@ -19,8 +20,11 @@ public class FirstTest extends BaseTest {
     public void verifyGetStartedTest() {
         HomePage homePage = new HomePage();
         UiHelper uiHelper = new UiHelper(page);
+        InnerTextAll innerTextAll = new InnerTextAll();
+        innerTextAll.getAllInnerText();
         uiHelper.waitUntilPageLoad();
         homePage.clickGetStartedButton();
+        uiHelper.waitUntilPageLoad();
     }
 
 }
