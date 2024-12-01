@@ -20,6 +20,7 @@ public class BaseTest extends PlaywrightFactory {
 
     @AfterClass
     public void tearDown() {
+//        takeScreenshot();
         if (page != null) {
             page.context().browser().close();
         }

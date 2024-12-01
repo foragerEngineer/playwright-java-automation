@@ -1,6 +1,7 @@
 package m.sierra.Driver;
 
 import com.microsoft.playwright.*;
+import io.qameta.allure.Step;
 import org.testng.annotations.Parameters;
 
 public class PlaywrightFactory {
@@ -34,6 +35,11 @@ public class PlaywrightFactory {
         page = browserContext.newPage();
         page.navigate(appURL);
         return page;
+    }
+
+    @Step
+    public void takeScreenshot() {
+        page.screenshot();
     }
 
 }
