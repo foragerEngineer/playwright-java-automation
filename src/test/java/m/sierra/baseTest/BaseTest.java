@@ -19,12 +19,12 @@ public class BaseTest extends PlaywrightFactory {
     public void setUp(@Optional("https://playwright.dev/") String appURL,
                       @Optional("chrome") String browserType, ITestContext context) {
         logListener.onStart(context);
+        slackReportUtil.setupParentMessage();
         page = getPage(appURL, browserType);
         BasePage.setAndConfigurePage(page);
         BrowserUtils browserUtils = new BrowserUtils(page.context().browser());
         browserUtils.newPageContext()
                 .startVideoRecording();
-        slackReportUtil.setupParentMessage();
     }
 
     @AfterClass
