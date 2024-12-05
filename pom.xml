@@ -74,6 +74,14 @@
             <artifactId>lombok</artifactId>
             <version>1.18.34</version>
         </dependency>
+
+        <dependency>
+            <groupId>slack.builder</groupId>
+            <artifactId>slack-report-builder</artifactId>
+            <version>1.0.0</version>
+            <scope>system</scope>
+            <systemPath>/Users/msierra/code/jars/slack-report-builder.jar</systemPath>
+        </dependency>
     </dependencies>
 
     <build>
