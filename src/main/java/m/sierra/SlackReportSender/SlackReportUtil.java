@@ -1,6 +1,7 @@
 package m.sierra.SlackReportSender;
 
 import org.testng.ITestContext;
+import slack.UserWebHookEnums.UserWebhooks;
 import slack.credentials.CredentialsLoader;
 import slack.slackbotcourier.courier_2.SendParentMessage;
 import slack.slackbotcourier.courier_3.SendThreadMessage;
@@ -11,7 +12,7 @@ public class SlackReportUtil {
     private static String parentMessageTs;
 
     public void setupParentMessage() {
-        CredentialsLoader.loadCredentials();
+        CredentialsLoader.loadCredentials(UserWebhooks.PLAYWRIGHT_REPORTING);
 
         String suiteName = "Sample Tests";
         String buildVersion = "1.0.0";
