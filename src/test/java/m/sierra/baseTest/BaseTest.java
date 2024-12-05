@@ -25,6 +25,7 @@ public class BaseTest extends PlaywrightFactory {
         BrowserUtils browserUtils = new BrowserUtils(page.context().browser());
         browserUtils.newPageContext()
                 .startVideoRecording();
+        slackReportUtil.setupParentMessage();
     }
 
     @AfterClass
