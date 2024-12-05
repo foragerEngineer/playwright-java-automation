@@ -18,6 +18,8 @@ public class BaseTest extends PlaywrightFactory {
                 .startVideoRecording();
     }
 
+
+
     @AfterClass
     public void tearDown() {
 //        takeScreenshot();

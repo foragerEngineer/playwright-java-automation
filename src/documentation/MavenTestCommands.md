@@ -3,7 +3,7 @@
 To run tests in Maven, you can use the following commands:
 
 - `mvn test` - This command will run all the tests in the project.
-- `mvn test -Dtest=FirstTest` - This command will run all the tests in the specified test class.
+- `mvn clean test -Dtest=FirstTest` - This command will run all the tests in the specified test class.
 - `mvn test -Dtest=FirstTest#verifyTitleTest` - This command will run the specified test method in the specified test class.
 - `mvn test -Dtest=TestClassName,AnotherTestClassName` - This command will run all the tests in the specified test classes.
 - `mvn test -Dtest=TestClassName,AnotherTestClassName#testMethodName` - This command will run the specified test method in the specified test classes.

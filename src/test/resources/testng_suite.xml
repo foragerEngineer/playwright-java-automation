@@ -9,7 +9,7 @@
     <parameter name="browserType" value="chrome"/>
     <test thread-count="5" name="First Tests">
         <classes>
-            <class name="m.sierra.Tests.FirstTest"/>
+            <class name="m.sierra.Tests.Discovery.FirstTest"/>
         </classes>
     </test> <!-- Test -->
 </suite> <!-- Suite -->

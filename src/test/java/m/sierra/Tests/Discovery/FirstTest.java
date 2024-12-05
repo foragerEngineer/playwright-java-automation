@@ -1,4 +1,4 @@
-package m.sierra.Tests;
+package m.sierra.Tests.Discovery;
 
 import m.sierra.PageUtils.Locators.InnerTextAll;
 import m.sierra.Pages.HomePage;
