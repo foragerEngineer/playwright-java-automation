@@ -18,8 +18,6 @@ public class BaseTest extends PlaywrightFactory {
     @Parameters({"appURL", "browserType"})
     public void setUp(@Optional("https://playwright.dev/") String appURL,
                       @Optional("chrome") String browserType, ITestContext context) {
-        logListener.onStart(context);
-        slackReportUtil.setupParentMessage();
         page = getPage(appURL, browserType);
         BasePage.setAndConfigurePage(page);
         BrowserUtils browserUtils = new BrowserUtils(page.context().browser());
@@ -36,8 +34,14 @@ public class BaseTest extends PlaywrightFactory {
         if (playwright != null) {
             playwright.close();
         }
-        logListener.onFinish(context);
-        slackReportUtil.sendTestResults(context);
     }
+
+//    @AfterTest
+//    public void sendResultsToReplyThread(ITestContext context) {
+//        logListener.onStart(context);
+//        slackReportUtil.setupParentMessage();
+//        logListener.onFinish(context);
+//        slackReportUtil.sendTestResults(context);
+//    }
 
 }

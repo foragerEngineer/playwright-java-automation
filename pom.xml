@@ -19,6 +19,17 @@
         <aspectj.version>1.9.22</aspectj.version>
     </properties>
 
+    <repositories>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/foragerEngineer/slack-report-builder</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
         <dependency>
@@ -75,13 +86,11 @@
             <version>1.18.34</version>
         </dependency>
 
-        <dependency>
-            <groupId>slack.builder</groupId>
-            <artifactId>slack-report-builder</artifactId>
-            <version>1.0.7</version>
-            <scope>system</scope>
-            <systemPath>/Users/msierra/code/jars/slack-report-builder.jar</systemPath>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.msierra.slack.builder</groupId>-->
+<!--            <artifactId>slack-report-builder</artifactId>-->
+<!--            <version>1.0.10</version>-->
+<!--        </dependency>-->
     </dependencies>
 
     <build>
