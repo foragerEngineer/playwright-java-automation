@@ -26,5 +26,6 @@ public class PlayAsserts extends BasePage {
 
 
     public void assertEmail(String email) {
+        
     }
 }
