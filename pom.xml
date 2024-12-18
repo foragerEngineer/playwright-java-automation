@@ -19,16 +19,15 @@
         <aspectj.version>1.9.22</aspectj.version>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>github</id>
-            <url>https://maven.pkg.github.com/foragerEngineer/slack-report-builder</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-        </repository>
-    </repositories>
-
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>github</id>-->
+<!--            <url>https://maven.pkg.github.com/foragerEngineer/slack-report-builder</url>-->
+<!--            <snapshots>-->
+<!--                <enabled>true</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
+<!--    </repositories>-->
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
@@ -84,6 +83,13 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.34</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.slack.api/slack-api-client -->
+        <dependency>
+            <groupId>com.slack.api</groupId>
+            <artifactId>slack-api-client</artifactId>
+            <version>1.44.1</version>
         </dependency>
 
 <!--        <dependency>-->

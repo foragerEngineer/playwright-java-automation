@@ -2,6 +2,7 @@ package m.sierra.baseTest;
 
 import m.sierra.Driver.PlaywrightFactory;
 import m.sierra.Pages.BasePage;
+import m.sierra.SlackReportSender.SlackReportUtil;
 import m.sierra.Utilities.BrowserUtils;
 import m.sierra.utilities.listeners.LogListener;
 import org.testng.ITestContext;
@@ -10,7 +11,7 @@ import org.testng.annotations.*;
 @Listeners(LogListener.class)
 public class BaseTest extends PlaywrightFactory {
 
-//    SlackReportUtil slackReportUtil = new SlackReportUtil();
+    SlackReportUtil slackReportUtil = new SlackReportUtil();
     LogListener logListener = new LogListener();
 
     @BeforeClass
@@ -35,12 +36,12 @@ public class BaseTest extends PlaywrightFactory {
         }
     }
 
-//    @AfterTest
-//    public void sendResultsToReplyThread(ITestContext context) {
-//        logListener.onStart(context);
-//        slackReportUtil.setupParentMessage();
-//        logListener.onFinish(context);
-//        slackReportUtil.sendTestResults(context);
-//    }
+    @AfterTest
+    public void sendResultsToReplyThread(ITestContext context) {
+        logListener.onStart(context);
+        slackReportUtil.setupParentMessage();
+        logListener.onFinish(context);
+        slackReportUtil.sendTestResults(context);
+    }
 
 }
