@@ -14,3 +14,9 @@ To run tests in Maven, you can use the following commands:
 - `mvn test -Dtest=TestClassName -DtestFailureIgnore=true -Dmaven.test.failure.ignore=true` - This command will ignore test failures.
 - `mvn test -Dtest=TestClassName -DtestFailureIgnore=true -Dmaven.test.skip=true` - This command will skip running the tests and ignore test failures.
 - `mvn test -Dtest=TestClassName -DtestFailureIgnore=true -Dmaven.test.skip=true -Dmaven.test.failure.ignore=true` - This command will skip running the tests and ignore test failures.
+
+
+## Run tests with mvn surefire command pointed to testng_suite.xml
+```
+mvn test -Dsurefire.suiteXmlFiles=src/test/resources/testng_suite.xml
+```

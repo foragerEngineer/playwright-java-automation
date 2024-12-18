@@ -8,8 +8,12 @@
     <parameter name="appURL" value="https://playwright.dev/"/>
     <parameter name="browserType" value="chrome"/>
     <test thread-count="5" name="First Tests">
-        <classes>
-            <class name="m.sierra.Tests.Discovery.FirstTest"/>
-        </classes>
+<!--        <classes>-->
+<!--            <class name="m.sierra.Tests.Discovery.FirstTest"/>-->
+<!--        </classes>-->
+
+        <packages>
+            <package name="m.sierra.Tests.Discovery.FirstTest"/>
+        </packages>
     </test> <!-- Test -->
 </suite> <!-- Suite -->
